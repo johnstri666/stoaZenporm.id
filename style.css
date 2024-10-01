@@ -1,0 +1,979 @@
+:root {
+  --color1: rgb(38, 141, 214);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baskerville";
+}
+
+body {
+  color: white;
+  background-color: rgb(1, 9, 19);
+}
+
+header {
+  background-color: rgb(1, 9, 19);
+  z-index: 9999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  align-items: center;
+  transition: 0.5 ease;
+  text-shadow: 0 5px 10px black;
+}
+
+header .logo {
+  background-clip: none;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation .navigation-items a {
+  position: relative;
+  color: black;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+
+section {
+  padding: 100px 150px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-shadow: 0 5px 10px black;
+}
+
+.home:before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background-color: #00000082;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+
+.home::after {
+  /*Gradient*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.home .content {
+  margin-left: 0rem;
+  margin-top: 5rem;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.home .content h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1px;
+  word-wrap: break-word;
+  animation: discover 1.4s ease-in-out forwards;
+}
+
+.home .content p {
+  font-weight: 100;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+  mix-blend-mode: difference;
+  max-width: calc(45rem + 2rem);
+  animation: discover 1.6s ease-in-out forwards;
+  text-shadow: 0 5px 10px black;
+}
+
+.home .content a {
+  font-weight: 600;
+  background: rgb(6, 56, 97);
+  padding: 20px 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  animation: discover 1.8s ease-in-out forwards;
+}
+
+.home .content a:hover {
+  color: rgb(6, 56, 97);
+  background-color: rgb(255, 255, 255);
+}
+
+.home img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-shadow: 0 5px 10px black;
+}
+
+.add img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.add::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 5%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.add .content {
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.add .content p {
+  margin-top: 3rem;
+  font-weight: 100;
+  font-size: 1.6rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+  mix-blend-mode: difference;
+  max-width: calc(45rem + 2rem);
+  float: right;
+}
+
+.add .content video {
+  float: right;
+  margin-top: 1rem;
+  max-width: 100%; /* Video akan responsif sesuai lebar layar */
+  height: auto;
+  border-radius: 5px;
+}
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+
+.about .cover img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 5%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.about .content {
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.about h2 {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 2.6rem;
+  color: rgb(38, 141, 214);
+  text-shadow: 0 5px 10px black;
+}
+.about h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 7rem;
+  word-wrap: break-word;
+  text-shadow: 0 5px 10px black;
+}
+
+.about h5 {
+  display: block;
+  text-align: center;
+  margin-top: 0.4rem;
+  font-size: 1.66rem;
+  margin-bottom: 5rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.about p {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 1.8rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.about .vandm {
+  padding-right: 10%;
+}
+
+.about p span {
+  font-size: 4rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(40, 165, 255);
+  text-shadow: 0 5px 10px black;
+}
+
+.about .teamst {
+  margin-top: 8rem;
+  text-align: justify;
+}
+
+.teamst h5 {
+  font-size: 3rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.teamst h5 span {
+  background-color: rgb(6, 56, 97);
+  padding: 2px 6px;
+}
+
+.teamst h5 span:hover {
+  background-color: white;
+  color: rgb(6, 56, 97);
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .row .image-container {
+  text-align: center;
+}
+
+.about .row .image-container img {
+  border-radius: 50%;
+  width: 60%;
+  border: 10px solid rgb(6, 56, 97);
+}
+
+.about .row .image-container .image-container-name {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.about .row .image-container .image-container-name:hover {
+  color: rgb(26, 73, 119);
+}
+
+.discover {
+  display: flex;
+  padding: 7rem 6% 1.4rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(asset/peakpx1.jpg);
+  align-items: center;
+  position: relative;
+  text-shadow: 0 5px 10px black;
+}
+
+.discover::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    1deg,
+    rgba(1, 1, 3, 1) 2%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.discover::before {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 2%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.discover h3 span {
+  color: var(--color1);
+}
+.discover h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.discover img {
+  border-radius: 10px;
+  width: 40%;
+  height: 40%;
+  margin-bottom: 2rem;
+}
+
+.discover p {
+  padding: 0% 5%;
+  font-size: 1.8rem;
+  text-align: justify;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.discover p span {
+  color: var(--color1);
+}
+
+.discover .title3 {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.6rem;
+  color: var(--color1);
+}
+
+.discover .Stoikage {
+  margin-top: 1.8rem;
+  font-size: 2.6rem;
+}
+
+.discover .listage .First {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discover .listage .First .image-containerfirst {
+  text-align: center;
+}
+
+.discover .listage .First .image-containerfirst img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+
+.discover .listage .First .image-containerfirst-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.discover .listage .Middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discover .listage .Middle .image-containersecond {
+  text-align: center;
+}
+.discover .listage .Middle .image-containersecond img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+
+.discover .listage .Middle .image-containersecond-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.discover .listage .roman {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.discover .listage .roman .image-containerrome {
+  text-align: center;
+}
+.discover .listage .roman .image-containerrome img {
+  border-radius: 10%;
+  width: 60%;
+  height: 60%;
+}
+.discover .listage .roman .image-containerrome-name {
+  margin-top: 0rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+.discover .Konsep {
+  margin-top: 5rem;
+  color: var(--color1);
+}
+
+.discover .Concept p {
+  margin: auto;
+}
+
+.Concept .typeofc {
+  font-weight: 200;
+  margin-bottom: 0.7rem;
+  margin-top: 3.5rem;
+  font-size: 2.6rem;
+}
+
+.Concept .conceptofp {
+  max-width: 90%;
+}
+
+.discover .Principle {
+  margin-top: 7rem;
+  font-size: 3rem;
+  color: var(--color1);
+  word-wrap: break-word;
+}
+
+.discover .Principles {
+  display: block;
+  align-items: center;
+  margin-bottom: 6rem;
+  word-wrap: break-word;
+}
+
+.discover .Principles .Pri1 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri1 h3 {
+  text-shadow: 0 5px 10px black;
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.89rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.Principles .Pri1 h3:hover {
+  background-color: var(--color1);
+  border: 3px solid var(--color1);
+}
+
+.discover .Principles .Pri1 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+
+.discover .Principles .Pri1 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 90%;
+}
+
+/*Resistor*/
+.discover .Principles .Pri2 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri2 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.3rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 5px 10px black;
+}
+
+.Principles .Pri2 h3:hover {
+  background-color: var(--color1);
+  border: 3px solid var(--color1);
+}
+
+.discover .Principles .Pri2 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+
+.discover .Principles .Pri2 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 90%;
+  text-shadow: 0 5px 10px black;
+}
+
+/*Resistor*/
+.discover .Principles .Pri3 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri3 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 5px 10px black;
+}
+
+.Principles .Pri3 h3:hover {
+  background-color: var(--color1);
+  border: 3px solid var(--color1);
+}
+
+.discover .Principles .Pri3 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+
+.discover .Principles .Pri3 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 90%;
+  text-shadow: 0 5px 10px black;
+}
+
+/*Resistor*/
+.discover .Principles .Pri4 {
+  margin-bottom: 2rem;
+}
+
+.Principles .Pri4 h3 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 5px 10px black;
+}
+
+.Principles .Pri4 h3:hover {
+  background-color: var(--color1);
+  border: 3px solid var(--color1);
+}
+.discover .Principles .Pri4 h4 {
+  margin-top: -1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+.discover .Principles .Pri4 p {
+  margin-top: 3rem;
+  text-align: justify;
+  margin: auto;
+  max-width: 90%;
+  margin-bottom: 9rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.more {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+
+.more::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.more::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 0.745) 3%,
+    rgba(255, 255, 255, 0) 90%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.more .cover img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.more .content {
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.more h2 {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(38, 141, 214);
+  text-shadow: 0 5px 10px black;
+}
+
+.more .content p {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 1.8rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.more .content img {
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.more .p1 span {
+  color: rgb(38, 141, 214);
+  font-weight: 300;
+}
+
+.credit {
+  text-align: left;
+  text-shadow: 0 5px 10px black;
+  padding-left: 10.6%;
+}
+
+.credit a {
+  font-size: 3rem;
+  word-wrap: break-word;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 5px 10px black;
+}
+
+.credit h3 {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.credit h4 {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.credit h5 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+@keyframes discover {
+  30% {
+    transform: translate(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.slider-navigation .nav-btn.active {
+  background: rgb(15, 119, 193);
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.4);
+  background-color: rgb(15, 119, 193);
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 12px 50px;
+  }
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  .menu-btn {
+    background: url(asset/Menu.png) no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url(asset/Close.png) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3 ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .content h2 {
+    font-size: 2.3rem; /* Mengurangi ukuran font */
+    line-height: normal; /* Menyesuaikan line-height agar lebih baik */
+    word-wrap: break-word; /* Memastikan kata tidak meluas */
+  }
+}
+
+@media (max-width: 480px) {
+  .home .content h2 {
+    font-size: 2rem; /* Lebih kecil untuk layar sangat kecil */
+    line-height: normal;
+    word-wrap: break-word;
+  }
+}
+
+header .navigation.active {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 1, 1, 0.5);
+}
+
+header .navigation .navigation-items a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 20px;
+}
+
+header .navigation .navigation-items a:hover {
+  color: rgb(15, 119, 193);
+}
+
+header .navigation .navigation-items a:before {
+  background: rgb(15, 119, 193);
+  height: 2px;
+}
+
+header .navigation.active .navigation-items {
+  background: rgb(1, 12, 25);
+  width: 500px;
+  max-width: 500px;
+  margin: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}

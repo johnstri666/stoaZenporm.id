@@ -1,0 +1,1037 @@
+:root {
+  --color1: rgb(38, 141, 214);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baskerville";
+}
+
+body {
+  color: white;
+  background-color: rgb(1, 9, 19);
+}
+
+header {
+  background-color: rgb(1, 9, 19);
+  z-index: 9999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px;
+  align-items: center;
+  transition: 0.5 ease;
+  text-shadow: 0 5px 10px black;
+}
+
+header .logo {
+  background-clip: none;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation .navigation-items a {
+  position: relative;
+  color: black;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+  content: "";
+  position: absolute;
+  background: black;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+
+section {
+  padding: 100px 150px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-shadow: 0 5px 10px black;
+}
+
+.home:before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background-color: #00000082;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+
+.home::after {
+  /*Gradient*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.home .content {
+  margin-left: 0rem;
+  margin-top: 5rem;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.home .content p {
+  font-weight: 100;
+  margin-top: 3rem;
+  font-size: 2rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+  mix-blend-mode: difference;
+  max-width: calc(45rem + 2rem);
+  animation: discover 1.6s ease-in-out forwards;
+  text-shadow: 0 5px 10px black;
+}
+
+.home .content p span {
+  color: var(--color1);
+}
+
+.home .content a {
+  font-weight: 600;
+  background: rgb(6, 56, 97);
+  padding: 20px 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  animation: discover 1.8s ease-in-out forwards;
+}
+
+.home .content a:hover {
+  color: rgb(6, 56, 97);
+  background-color: rgb(255, 255, 255);
+}
+
+.home img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quotes {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-align: center;
+  text-shadow: 0 5px 10px black;
+}
+
+.quotes .cover img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quotes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 5%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.quotes::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.quotes .content {
+  max-width: 100rem;
+  z-index: 888;
+  color: white;
+}
+
+.quotes h2 {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgb(38, 141, 214);
+  text-shadow: 0 5px 10px black;
+}
+.quotes h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 7rem;
+  word-wrap: break-word;
+  text-shadow: 0 5px 10px black;
+}
+
+.quotes h5 {
+  display: block;
+  text-align: center;
+  margin-top: 0.4rem;
+  font-size: 1.66rem;
+  margin-bottom: 5rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.quotes p {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 1.8rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 3rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.quotes .slider {
+  max-width: 1450px;
+  position: relative;
+  padding: 10px 20px;
+  overflow: hidden;
+  display: flex;
+  z-index: 1;
+}
+
+.slider i {
+  top: 50%;
+  background: rgb(255, 255, 255);
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 46px;
+  transition: transform 0.5s ease;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slider i:first-child {
+  left: 10px;
+}
+.slider i:last-child {
+  right: 10px;
+}
+
+.quotes .slider .item {
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 1.2s ease;
+}
+
+.item img {
+  padding-left: 0.3rem;
+  scroll-snap-align: center;
+  border-radius: 20px;
+  height: auto;
+  width: calc(100% / 3);
+  object-fit: cover;
+  margin-left: 10px;
+}
+.slider img:first-child {
+  margin-left: 0px;
+}
+
+.journal {
+  display: flex;
+  padding: 7rem 6% 1.4rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(asset/peakpx1.jpg);
+  align-items: center;
+  position: relative;
+  text-shadow: 0 5px 10px black;
+}
+
+.journal::after {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    1deg,
+    rgba(1, 1, 3, 1) 2%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.journal::before {
+  /*Gradient*/
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 1, 3, 1) 2%,
+    rgba(255, 255, 255, 0) 10%
+  );
+  z-index: 1;
+}
+
+.journal h3 {
+  margin-top: 4rem;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: rgb(38, 141, 214);
+}
+
+.journal img {
+  border-radius: 10px;
+  width: 40%;
+  height: 40%;
+  margin-bottom: 2rem;
+}
+
+.journal p {
+  padding: 0% 5%;
+  font-size: 1.8rem;
+  text-align: justify;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.journal .image-containerfirst {
+  padding: 1.4rem 12%;
+}
+
+.journal .image-containerfirst h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.journal .image-containerfirst img {
+  width: 50%;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.Concept .typeofc {
+  font-weight: 200;
+  margin-bottom: 0.7rem;
+  margin-top: 3.5rem;
+  font-size: 2.6rem;
+}
+
+.Concept .conceptofp {
+  max-width: 90%;
+}
+
+.journal .structure {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.journal .structure h2 {
+  font-size: 3rem;
+}
+.journal .structure h3 {
+  font-size: 3rem;
+  color: white;
+}
+
+.journal .structure p {
+  margin-top: 2rem;
+}
+
+.journal .structure .Step1 p {
+  padding: 0 22%;
+}
+.journal .structure .Step1 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step2 p {
+  padding: 0 22%;
+}
+.journal .structure .Step2 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step3 p {
+  padding: 0 22%;
+}
+.journal .structure .Step3 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step4 {
+  margin-bottom: 8rem;
+}
+
+.journal .structure .Step4 p {
+  padding: 0 22%;
+  margin-bottom: 2rem;
+}
+.journal .structure .Step4 h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 1.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.journal .structure .Step4 h4 {
+  font-size: 2.1rem;
+}
+
+.checklist {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-shadow: 0 5px 10px black;
+}
+
+.checklist::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(1, 10, 16) 8%,
+    rgba(2, 83, 130, 0) 80%
+  );
+  z-index: 1;
+  left: 0;
+}
+
+.checklist img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.checklist .content {
+  text-align: center;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+}
+
+.checklist .content h2 {
+  word-wrap: break-word;
+  font-size: 3.5rem;
+  color: var(--color1);
+}
+
+.checklist .content p {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 2rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.checklist .content .check1 {
+  margin-bottom: 2rem;
+  background-color: #000204df;
+  border-radius: 30px;
+}
+
+.checklist .content .check1 h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.8rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.checklist .content .check1 h4 {
+  font-size: 2rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+.checklist .row .terra {
+  padding: 0 20%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checklist .row p {
+  font-size: 1.6rem;
+  text-align: left;
+  margin-right: 10px; /* Memberi jarak antara p dan label */
+  flex: 1; /* Buat elemen p mengisi ruang yang ada */
+}
+
+.checklist .terra label {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.checklist .terra input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.checklist .content .Check2 {
+  margin-bottom: 2rem;
+  background-color: #000204df;
+  border-radius: 30px;
+}
+
+.checklist .content .Check2 h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  border: 3px solid white;
+  padding: 1.6rem 2.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  max-width: fit-content;
+  position: relative;
+  z-index: 10;
+}
+
+.checklist .content .Check2 h4 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.checklist .Reflection {
+  margin-top: 4rem;
+}
+
+.checklist .Reflection h2 {
+  font-size: 2.6rem;
+}
+
+.checklist .Reflection h3 {
+  margin-top: 3rem;
+  font-size: 2.6rem;
+  color: var(--color1);
+}
+
+.checklist .Reflection p {
+  padding: 0 12%;
+}
+
+.checklist .Reflection p span {
+  color: var(--color1);
+}
+
+.test {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+
+.test img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.test .content {
+  text-align: center;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+}
+
+.test .content h1 {
+  font-size: 3.6rem;
+  color: var(--color1);
+  text-shadow: 0 5px 10px black;
+}
+
+.test .content h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  text-shadow: 0 5px 10px black;
+}
+
+.test .content p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+  text-align: justify;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.test .content a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: white;
+  background-color: var(--color1);
+  border-radius: 10px;
+  padding: 2% 6%;
+}
+
+.test .content a:hover {
+  background-color: white;
+  color: var(--color1);
+}
+
+.meditation {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+  text-shadow: 0 5px 10px black;
+}
+
+.meditation img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meditation .content {
+  text-align: center;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+}
+
+.meditation .content h2 {
+  word-wrap: break-word;
+  font-size: 3.5rem;
+  color: var(--color1);
+}
+
+.meditation .content p {
+  word-wrap: break-word;
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 2rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.meditation .content h3 {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 0.4rem;
+  margin-top: 3rem;
+}
+
+.meditation audio {
+  width: 300px; /* Adjust width */
+  height: 60px; /* Adjust height */
+  outline: none; /* Remove outline */
+  padding: 5px; /* Padding */
+  margin-top: 6px;
+}
+
+.meditation audio::-webkit-media-controls-panel {
+  background-color: #ffffff; /* Change control panel color */
+}
+
+.meditation audio::-webkit-media-controls-play-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.meditation audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--color1);
+}
+
+.meditation audio::-webkit-media-controls-mute-button {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.meditation audio::-webkit-media-controls-mute-button:hover {
+  background-color: var(--color1);
+}
+
+.meditation audio::-webkit-media-controls-volume-slider {
+  background-color: var(--color1);
+  border-radius: 50%;
+}
+.meditation audio::-webkit-media-controls-panel {
+  background-color: var(--color1);
+}
+
+.discussion {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #000000;
+}
+
+.discussion img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discussion .content {
+  text-align: center;
+  padding: 1rem 1%;
+  max-width: 100rem;
+  z-index: 888;
+}
+
+.discussion .content h2 {
+  word-wrap: break-word;
+  font-size: 3.5rem;
+  color: var(--color1);
+  text-shadow: 0 5px 10px black;
+}
+
+.discussion .content p {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 2rem;
+  margin-left: 1.4rem;
+  padding: 0% 0%;
+  margin-bottom: 4rem;
+  text-shadow: 0 5px 10px black;
+}
+
+.discussion .content .cta {
+  word-wrap: break-word;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: 6rem;
+  color: white;
+  background-color: var(--color1);
+  padding: 1rem 3rem;
+}
+
+.discussion .content .cta:hover {
+  background-color: white;
+  color: rgb(1, 12, 25);
+}
+
+.credit {
+  word-wrap: break-word;
+  text-align: left;
+  text-shadow: 0 5px 10px black;
+  padding-left: 10.6%;
+}
+
+.credit a {
+  font-size: 3rem;
+  word-wrap: break-word;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.credit h3 {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.credit h4 {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+}
+
+.credit h5 {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+@keyframes discover {
+  30% {
+    transform: translate(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+
+.slider-navigation .nav-btn.active {
+  background: rgb(15, 119, 193);
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.4);
+  background-color: rgb(15, 119, 193);
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 12px 50px;
+  }
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  .menu-btn {
+    background: url(asset/Menu.png) no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url(asset/Close.png) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3 ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .content h2 {
+    font-size: 2.3rem; /* Mengurangi ukuran font */
+    line-height: normal; /* Menyesuaikan line-height agar lebih baik */
+    word-wrap: break-word; /* Memastikan kata tidak meluas */
+  }
+
+  .item img {
+    width: 104%;
+    margin-left: 0px;
+  }
+
+  .quotes .slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .content h2 {
+    font-size: 2rem; /* Lebih kecil untuk layar sangat kecil */
+    line-height: normal;
+    word-wrap: break-word;
+  }
+
+  .item img {
+    width: 110%;
+    margin-left: 0px;
+  }
+}
+
+header .navigation.active {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 1, 1, 0.5);
+}
+
+header .navigation .navigation-items a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 20px;
+}
+
+header .navigation .navigation-items a:hover {
+  color: rgb(15, 119, 193);
+}
+
+header .navigation .navigation-items a:before {
+  background: rgb(15, 119, 193);
+  height: 2px;
+}
+
+header .navigation.active .navigation-items {
+  background: rgb(1, 12, 25);
+  width: 500px;
+  max-width: 500px;
+  margin: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
