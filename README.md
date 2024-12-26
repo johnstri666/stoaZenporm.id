@@ -1,5 +1,10 @@
 # stoaZenporm.id
 
+Created by Johnstri Aprilian Sinulingga 
+
+with Social Research Team from SMA Iskandar Muda:
+Silvia M. Rosari Manao  &  Maya Dilla Saira
+
 ------English--------
 Welcome to StoaZenporm.id, a digital platform dedicated to introducing and applying Stoicism—one of the most profound and transformative schools of thought in human history. We are here to unravel the essential concepts of Stoicism, from principles of morality and self-resilience to how this philosophy teaches serenity amidst the inevitable flow of change.
 
